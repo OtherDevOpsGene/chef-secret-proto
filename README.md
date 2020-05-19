@@ -8,6 +8,15 @@ The `microsoft_azure` cookbook requires:
 chef exec gem install azure
 ```
 
+## Chef Vault
+
+```sh
+knife vault create azure_key_vault spn --json chef-vault.json --admins 'ggotimer,chef-node-azure-1.pfzez5cxvdrupfovgl5d405khh.bx.internal.cloudapp.net' --mode client
+knife vault show azure_key_vault spn --mode client
+```
+
+## For other microsoft_azure controls
+
 $cert = New-SelfSignedCertificate -DnsName ggotimer.coveros.com -CertStoreLocation "cert:\LocalMachine\My" -KeyLength 2048 -KeySpec "KeyExchange"
 Export-Certificate -Type CERT -Cert $cert -FilePath .\ggotimer-coveros-com.cer
 openssl x509 -in ggotimer-coveros-com.cer -out ggotimer-coveros-com.pem -outform PEM

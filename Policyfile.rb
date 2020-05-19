@@ -15,3 +15,4 @@ run_list 'chef-secret-proto::default'
 # Specify a custom source for a single cookbook:
 cookbook 'chef-secret-proto', path: '.'
 cookbook 'microsoft_azure'
+cookbook 'chef-vault'
